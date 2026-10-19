@@ -79,7 +79,14 @@ window.NDM_CONFIG = {
       meta: ["Maximum 3 guests per room"],
       features: [],
       videoSlot: "",
-    }
+    },
+    {
+      id: "family-room",
+      name: "Family Room",
+      description: "A family room option for guests travelling together. Confirm the room layout, occupancy and included facilities directly with the hotel.",
+      meta: ["3 family rooms listed"],
+      features: ["Family-friendly room category", "Ask about bedding configuration"],
+      videoSlot: "",
   ],
   galleryLimit: 24,
   /*
