@@ -948,3 +948,18 @@ p, h1, h2, h3, a, small, label, span { overflow-wrap: anywhere; }
 .room-inventory-note span { color: var(--muted); font-size: .82rem; }
 @media (max-width: 860px) { .amenity-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 640px) { .amenity-list { grid-template-columns: minmax(0, 1fr); } .room-rate-table th, .room-rate-table td { padding: 11px 12px; } }
+
+
+/* Responsive hotel film controls */
+.intro-sound, .sound-toggle { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 10px 15px; border: 1px solid rgba(255,255,255,.72); background: rgba(22,25,24,.42); color: #fff; font: 600 .68rem/1.2 var(--sans); letter-spacing: .1em; text-transform: uppercase; cursor: pointer; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+.intro-sound { position: absolute; z-index: 5; top: max(24px, env(safe-area-inset-top)); left: max(24px, env(safe-area-inset-left)); }
+.intro-sound:hover, .sound-toggle:hover { background: rgba(255,255,255,.18); }
+.hero-media-controls { position: absolute; z-index: 4; right: max(22px, env(safe-area-inset-right)); bottom: max(22px, env(safe-area-inset-bottom)); display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 9px; }
+.hero-media-controls .motion-toggle { position: static; }
+.hero-media-controls .sound-toggle, .hero-media-controls .motion-toggle { min-height: 42px; padding: 10px 13px; font-size: .62rem; }
+@media (max-width: 640px) {
+  .intro-sound { top: max(16px, env(safe-area-inset-top)); left: max(16px, env(safe-area-inset-left)); min-height: 42px; padding: 9px 11px; font-size: .6rem; }
+  .intro-skip { top: max(16px, env(safe-area-inset-top)); right: max(16px, env(safe-area-inset-right)); min-height: 42px; padding-left: 10px; font-size: .6rem; letter-spacing: .12em; }
+  .hero-media-controls { right: 16px; bottom: max(16px, env(safe-area-inset-bottom)); gap: 7px; }
+  .hero-media-controls .sound-toggle, .hero-media-controls .motion-toggle { min-height: 40px; padding: 9px 10px; font-size: .58rem; }
+}
