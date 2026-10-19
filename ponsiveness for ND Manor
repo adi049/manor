@@ -1,0 +1,12 @@
+warning: in the working copy of '.github/workflows/pages.yml', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '404.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'robots.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'sitemap.xml', LF will be replaced by CRLF the next time Git touches it
+ 404.html    |   59 [32m+[m[31m-[m
+ README.md   |   99 [32m++[m[31m-[m
+ index.html  | 1959 [32m+++++++[m[31m----------------------------------------------------[m
+ robots.txt  |    2 [32m+[m[31m-[m
+ sitemap.xml |    8 [32m+[m[31m-[m
+ 5 files changed, 363 insertions(+), 1764 deletions(-)

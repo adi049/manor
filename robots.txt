@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Allow: /assets/
 
-Sitemap: https://ndmanor.com/sitemap.xml
+Sitemap: https://adi049.github.io/LiveNDMARON/sitemap.xml
