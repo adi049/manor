@@ -29,8 +29,8 @@ window.NDM_CONFIG = {
   },
   /* Keep unavailable clips as inactive slots until their category, source and use are confirmed. */
   videoSlots: {
-    intro: { src: "assets/videos/intro-video.mp4", poster: "assets/img/nd-manor-1600.webp", available: false },
-    homeHero: { src: "assets/videos/home-hero.mp4", poster: "assets/img/nd-manor-1600.webp", available: false },
+    intro: { src: "assets/videos/nd-manor-intro.mp4", poster: "assets/img/nd-manor-1600.webp", available: true },
+    homeHero: { src: "assets/videos/nd-manor-intro.mp4", poster: "assets/img/nd-manor-1600.webp", available: true },
     deluxeRoom: { src: "assets/videos/deluxe-room.mp4", poster: "assets/img/gallery/deluxe-room.jpg", available: false },
     superDeluxeRoom: { src: "assets/videos/super-deluxe-room.mp4", poster: "assets/img/gallery/super-deluxe-room.jpg", available: false },
     hotelWalkthrough: { src: "assets/videos/hotel-walkthrough.mp4", poster: "assets/img/nd-manor-1000.webp", available: false },
