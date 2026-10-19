@@ -104,6 +104,7 @@
     if (window.__NDMIntroFailsafe) window.clearTimeout(window.__NDMIntroFailsafe);
     var video = $("#introVideo", overlay);
     var skip = $("[data-intro-skip]", overlay);
+    var soundButton = $("[data-intro-sound]", overlay);
     var playButton = $("[data-intro-play]", overlay);
     var status = $("[data-intro-status]", overlay);
     var introSlot = cfg.videoSlots && cfg.videoSlots.intro;
@@ -157,6 +158,8 @@
       video.muted = true;
       video.defaultMuted = true;
       video.playsInline = true;
+      video.loop = true;
+      video.setAttribute("loop", "");
       video.setAttribute("muted", "");
       video.setAttribute("playsinline", "");
       var source = introSlot && introSlot.available !== false ? introSlot.src : "";
@@ -186,6 +189,17 @@
     }
 
     if (skip) skip.addEventListener("click", finishIntro);
+    if (soundButton) soundButton.addEventListener("click", function () {
+      if (!video) return;
+      video.muted = !video.muted;
+      video.defaultMuted = video.muted;
+      soundButton.setAttribute("aria-pressed", String(!video.muted));
+      soundButton.textContent = video.muted ? "Unmute video" : "Mute video";
+      if (!video.muted && video.paused) {
+        var soundPlay = video.play();
+        if (soundPlay && typeof soundPlay.catch === "function") soundPlay.catch(function () { if (status) status.textContent = "Tap play to start the film"; });
+      }
+    });
     if (playButton) playButton.addEventListener("click", function () {
       playButton.hidden = true;
       if (status) status.textContent = "";
@@ -200,7 +214,6 @@
         if (playButton) playButton.hidden = true;
         if (status) status.textContent = "";
       });
-      video.addEventListener("ended", finishIntro);
       video.addEventListener("error", showFallback);
     }
     document.addEventListener("keydown", function introKey(event) {
@@ -227,6 +240,7 @@
     var video = $("[data-hero-video]", hero);
     var poster = $("[data-hero-poster]", hero);
     var toggle = $("[data-motion-toggle]", hero);
+    var soundToggle = $("[data-hero-sound]", hero);
     var heroSlot = cfg.videoSlots && cfg.videoSlots.homeHero;
     var heroPosterPath = (heroSlot && heroSlot.poster) || (cfg.media && cfg.media.homeHeroPoster);
     var source = heroSlot && heroSlot.available !== false ? heroSlot.src : "";
@@ -254,6 +268,19 @@
     });
     var play = video.play();
     if (play && typeof play.catch === "function") play.catch(function () { hero.classList.remove("has-video"); });
+    if (soundToggle) {
+      soundToggle.addEventListener("click", function () {
+        video.muted = !video.muted;
+        video.defaultMuted = video.muted;
+        video.setAttribute("muted", "");
+        soundToggle.setAttribute("aria-pressed", String(!video.muted));
+        soundToggle.textContent = video.muted ? "Unmute video" : "Mute video";
+        if (!video.muted && video.paused) {
+          var soundPlay = video.play();
+          if (soundPlay && typeof soundPlay.catch === "function") soundPlay.catch(function () {});
+        }
+      });
+    }
     if (toggle) {
       toggle.addEventListener("click", function () {
         if (video.paused) {
