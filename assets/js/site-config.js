@@ -87,6 +87,7 @@ window.NDM_CONFIG = {
       meta: ["3 family rooms listed"],
       features: ["Family-friendly room category", "Ask about bedding configuration"],
       videoSlot: "",
+    }
   ],
   galleryLimit: 24,
   /*
