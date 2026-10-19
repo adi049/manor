@@ -37,7 +37,8 @@
       <video class="intro-overlay__video" id="introVideo" muted playsinline preload="auto" poster="assets/img/nd-manor-1600.webp" aria-hidden="true"></video>
     </div>
     <div class="intro-overlay__shade" aria-hidden="true"></div>
-    <button class="intro-skip" type="button" data-intro-skip>Skip intro</button>
+    <button class="intro-sound" type="button" data-intro-sound aria-pressed="false">Unmute video</button>
+    <button class="intro-skip" type="button" data-intro-skip>Enter website ↗</button>
     <button class="intro-play" type="button" data-intro-play hidden aria-label="Play the hotel introduction">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.8c0-.8.9-1.3 1.6-.9l10.1 6.2a1.1 1.1 0 0 1 0 1.8L8.6 18.1c-.7.4-1.6-.1-1.6-.9z"/></svg>
     </button>
@@ -97,7 +98,7 @@
     <section class="home-hero" id="homeHero" data-home-hero aria-labelledby="home-title">
       <div class="home-hero__media" aria-hidden="true">
         <img src="assets/img/nd-manor-1600.webp" data-media="exteriorDusk" data-hero-poster alt="" fetchpriority="high">
-        <video data-hero-video muted loop playsinline preload="none" poster="assets/img/nd-manor-1600.webp" aria-hidden="true"></video>
+        <video data-hero-video muted loop playsinline autoplay preload="metadata" poster="assets/img/nd-manor-1600.webp" aria-hidden="true"></video>
       </div>
       <div class="home-hero__shade" aria-hidden="true"></div>
       <div class="wrap home-hero__inner">
@@ -117,7 +118,7 @@
           <span>Dehradun, Uttarakhand</span>
         </aside>
       </div>
-      <button class="motion-toggle" type="button" data-motion-toggle aria-pressed="false" hidden>Pause motion</button>
+      <div class="hero-media-controls"><button class="sound-toggle" type="button" data-hero-sound aria-pressed="false">Unmute video</button><button class="motion-toggle" type="button" data-motion-toggle aria-pressed="false" hidden>Pause motion</button></div>
       <a class="home-hero__scroll" href="#homeOverview">Discover the hotel</a>
     </section>
 
