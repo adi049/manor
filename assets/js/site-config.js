@@ -81,7 +81,7 @@ window.NDM_CONFIG = {
       videoSlot: "",
     }
   ],
-  galleryLimit: 20,
+  galleryLimit: 24,
   /*
    * Central metadata for approved images. Use neutral captions where the precise room category is unknown.
    * /uploads/download.png was inspected and is a near-duplicate of restaurant-dining.webp, so it is not added again.
