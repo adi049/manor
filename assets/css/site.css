@@ -931,3 +931,20 @@ p, h1, h2, h3, a, small, label, span { overflow-wrap: anywhere; }
  .gallery-grid { grid-template-columns: minmax(0, 1fr) !important; grid-auto-rows: 230px; }
  .mobile-menu__panel { padding: 18px; }
 }
+
+
+/* Hotel ND Manor additions: room tariffs and facility inventory. */
+.room-rate-section { margin: 34px 0 26px; }
+.room-rate-table-wrap { width: 100%; overflow-x: auto; border: 1px solid var(--line); background: var(--white); }
+.room-rate-table { width: 100%; min-width: 560px; border-collapse: collapse; color: var(--brown-deep); }
+.room-rate-table th, .room-rate-table td { padding: 13px 16px; border-bottom: 1px solid var(--line); text-align: center; font-size: .82rem; }
+.room-rate-table thead th { color: #fff; background: #426fc0; font-weight: 700; }
+.room-rate-table tbody th { text-align: left; font-weight: 600; }
+.room-rate-table tbody tr:last-child th, .room-rate-table tbody tr:last-child td { border-bottom: 0; }
+.room-rate-table tbody tr:hover { background: var(--blue-pale); }
+.amenity-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.room-inventory-note { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 22px; padding: 18px 20px; border-left: 3px solid var(--magenta); background: var(--white); color: var(--brown-deep); }
+.room-inventory-note strong { font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; }
+.room-inventory-note span { color: var(--muted); font-size: .82rem; }
+@media (max-width: 860px) { .amenity-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .amenity-list { grid-template-columns: minmax(0, 1fr); } .room-rate-table th, .room-rate-table td { padding: 11px 12px; } }
